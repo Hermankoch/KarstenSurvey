@@ -1,0 +1,555 @@
+ <!doctype html>
+ <html class="no-js" lang="en">
+
+ <head>
+   <script>
+     (function() {
+       var cookies = navigator.cookieEnabled || ('cookie' in document && (document.cookie.length > 0 || (document.cookie = 'test').indexOf.call(document.cookie, 'test') > -1));
+       if (!cookies) location.href = 'https://www.nexthunt.co.za/cookies.html';
+     })();
+   </script>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta name="author" content="Quest Communications - info@questcom.co.za - +27 86 117 8378" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <title>NextHunt Administration</title>
+   <script src="https://www.nexthunt.co.za/static/scripts/modernizr.js"></script>
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/blueimp-gallery.min.css" />
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/font-awesome.min.css" />
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/bootstrap.min.css" />
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/bootstrap-theme.min.css" />
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/default.css" />
+   <link rel="stylesheet" href="https://www.nexthunt.co.za/static/styles/admin.css" />
+   <!--[if lt IE 9]> <script src="https://www.nexthunt.co.za/static/scripts/css3-mediaqueries.js"></script> <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script> <![endif]-->
+ </head>
+
+ <body>
+   <header class="hidden-print">
+     <div class="container-fluid">
+       <div class="row" style="background-image:url('https://www.nexthunt.co.za/shared/images/banners/page_banner.jpg?1557761274');">
+         <div id="logo">
+           <a href="https://www.nexthunt.co.za/"><img src="https://www.nexthunt.co.za/static/images/logo_white.png" alt="" /></a>
+         </div>
+       </div>
+     </div>
+   </header>
+   <div class="container" style="padding-top: 20px;">
+     <div class="row">
+       <div class="container" style="padding-top: 0;">
+         <nav class="navbar navbar-default nh-confirm nh-gradient">
+           <div class="container-fluid">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+                 <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+               <a href="https://www.nexthunt.co.za/admin" class="navbar-brand" title="Return to Admin">
+                 <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                   <span class="glyphicon-only glyphicon fa-fw glyphicon-home"></span></span></a></div>
+             <div class="collapse navbar-collapse" id="navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                 <li class="dropdown">
+                   <a href="https://www.nexthunt.co.za/administration/farms/index" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                     <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Farms</span>
+                     <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/index">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                           <span class="fa fa-fw fa-picture-o"></span>View Farms</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/create">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                           <span class="glyphicon fa-fw glyphicon-plus"></span>New Farm</span></a>
+                     </li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                           <span class="glyphicon fa-fw glyphicon-sort"></span>Featured Farms</span></a>
+                     </li>
+                     <li class="divider"></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/review/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-eye-open"></span>View Farm</span></a></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-pencil"></span>Edit
+                           Farm</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/images/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-camera"></span>Edit
+                           Images</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/operator/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-user"></span>View Operator</span></a></li>
+                     <li class="disabled">
+                       <a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-star"></span>Toggle Featured</span></a>
+                     </li>
+                     <li class="divider"></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/availability/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-calendar"></span>Edit Availability</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/features/1087">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-cutlery"></span>Edit Facilities</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/habitation/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-paw"></span>Edit
+                           Habitation</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/prices/1087">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                           <span class="fa fa-fw fa-usd"></span>Edit Hunting Prices</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/styles/1087">
+                         <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                           <span class="fa fa-fw fa-bullseye"></span>Edit Hunting Styles</span></a></li>
+                     <li class="dropdown dropdown-submenu">
+                       <a href="https://www.nexthunt.co.za/administration/packages/index/1087" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-gift"></span>Edit Packages</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/packages/index/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                               <span class="glyphicon fa-fw glyphicon-list">
+                               </span>View Packages</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/packages/create/1087">
+                             <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+                               <span class="glyphicon fa-fw glyphicon-plus"></span>New Package</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Package</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Package</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Package</span></a></li>
+                       </ul>
+                     </li>
+                     <li><a href="https://www.nexthunt.co.za/administration/farms/territory/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-leaf"></span>Edit Territory</span></a></li>
+                     <li class="divider"></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-warning"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="fa fa-fw fa-copy"></span>Duplicate Farm</span></a></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-remove"></span>Delete Farm</span></a></li>
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a href="https://www.nexthunt.co.za/administration/operators/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                       class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Operators</span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                     <li><a href="https://www.nexthunt.co.za/administration/operators/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-user"></span>View
+                           Operators</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/operators/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-plus"></span>New Operator</span></a></li>
+                     <li class="divider"></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-eye-open"></span>View
+                           Operator</span></a></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-pencil"></span>Edit
+                           Operator</span></a></li>
+                     <li class="dropdown dropdown-submenu disabled"><a href="https://www.nexthunt.co.za/" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-picture-o"></span>Edit Allocations</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-list"></span>View
+                               Allocated Farms</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-plus"></span>New
+                               Allocated Farm</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-lock"></span>Reset
+                           Password</span></a></li>
+                     <li class="divider"></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-remove"></span>Delete Operator</span></a></li>
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a href="https://www.nexthunt.co.za/administration/hunters/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                       class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Hunters</span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                     <li><a href="https://www.nexthunt.co.za/administration/hunters/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-user"></span>View
+                           Hunters</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/hunters/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-plus"></span>New Hunter</span></a></li>
+                     <li class="divider"></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-eye-open"></span>View
+                           Hunter</span></a></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-pencil"></span>Edit
+                           Hunter</span></a></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-lock"></span>Reset
+                           Password</span></a></li>
+                     <li class="divider"></li>
+                     <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="glyphicon fa-fw glyphicon-remove"></span>Delete Hunter</span></a></li>
+                   </ul>
+                 </li>
+                 <li><a href="https://www.nexthunt.co.za/administration/bookings/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Bookings</span></a></li>
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown"><a href="https://www.nexthunt.co.za/" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                       class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Pages</span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/header/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-folder-open"></span>Header Pages</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/header/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Header Pages</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/header/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Page</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-sort"></span>Reorder Pages</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Page</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Page Details</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-file-text-o"></span>Edit Page
+                               Contents</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Page</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/footer/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-folder-open-o"></span>Footer Pages</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/footer/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Footer Pages</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/footer/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Page</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-sort"></span>Reorder Pages</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Page</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Page Details</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-file-text-o"></span>Edit Page
+                               Contents</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Page</span></a></li>
+                       </ul>
+                     </li>
+                     <li><a href="https://www.nexthunt.co.za/administration/header/home_banner"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="fa fa-fw fa-file-image-o"></span>Home Background</span></a></li>
+                     <li><a href="https://www.nexthunt.co.za/administration/header/page_banner"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                             class="fa fa-fw fa-file-image-o"></span>Page Banner</span></a></li>
+                   </ul>
+                 </li>
+                 <li class="dropdown"><a href="https://www.nexthunt.co.za/" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                       class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Settings</span> <span class="caret"></span></a>
+                   <ul class="dropdown-menu" role="menu">
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/animals/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-paw"></span>Animals</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/animals/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Animals</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/animals/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Animal</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Animal</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Animal</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-camera"></span>Edit
+                               Image</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Animal</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/styles/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-bullseye"></span>Hunting Styles</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/styles/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Hunting Styles</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/styles/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Hunting Style</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Hunting Style</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Hunting Style</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Hunting Style</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/facilities/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-cutlery"></span>Facilities</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/facilities/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Facilities</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/facilities/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Facility</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Facility</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Facility</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Facility</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/terrains/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-leaf"></span>Terrains</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/terrains/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Terrains</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/terrains/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Terrain</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Terrain</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Terrain</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Terrain</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="divider"></li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/adverts/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-newspaper-o"></span>Banner Adverts</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/adverts/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Banner Adverts</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/adverts/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Banner Advert</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/adverts/reorder"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-sort"></span>Reorder Banner Adverts</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Banner Advert</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Banner Advert</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-camera"></span>Edit
+                               Image</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Banner Advert</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="divider"></li>
+                     <li class="dropdown dropdown-submenu"><a href="https://www.nexthunt.co.za/administration/countries/index" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-globe"></span>Countries</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/countries/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Countries</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/countries/create"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Country</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Country</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Country</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Country</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu disabled"><a href="https://www.nexthunt.co.za/" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-map-marker"></span>States</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/states/index/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View States</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/states/create/1087"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New State</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View State</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit State</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete State</span></a></li>
+                       </ul>
+                     </li>
+                     <li class="dropdown dropdown-submenu disabled"><a href="https://www.nexthunt.co.za/" class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                           class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-home"></span>Towns</span></a>
+                       <ul class="dropdown-menu" role="menu">
+                         <li><a href="https://www.nexthunt.co.za/administration/towns/index/1087/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-list"></span>View Towns</span></a></li>
+                         <li><a href="https://www.nexthunt.co.za/administration/towns/create/1087/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-plus"></span>New Town</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-eye-open"></span>View Town</span></a></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-pencil"></span>Edit Town</span></a></li>
+                         <li class="divider"></li>
+                         <li class="disabled"><a href="https://www.nexthunt.co.za/" class="text-danger"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span
+                                 class="glyphicon fa-fw glyphicon-remove"></span>Delete Town</span></a></li>
+                       </ul>
+                     </li>
+                   </ul>
+                 </li>
+                 <li><a href="https://www.nexthunt.co.za/"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-log-out"></span>Exit Admin</span></a></li>
+               </ul>
+             </div>
+           </div>
+         </nav>
+         <ol class="breadcrumb nh-confirm">
+           <li><a href="https://www.nexthunt.co.za/administration/farms/index"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="fa fa-fw fa-picture-o"></span>Farms</span></a>
+           </li>
+           <li><a href="https://www.nexthunt.co.za/administration/farms/review/1087">Aan-die-Vaal Nature Reserve</a></li>
+           <li class="active">Edit Farm</li>
+         </ol>
+         <form action="https://www.nexthunt.co.za/administration/farms/update/1087" class="form-horizontal form-edit" autocomplete="off" method="post" accept-charset="utf-8"> <input type="hidden" name="Submitted" value="1" />
+           <div class="row">
+             <div class="col-xs-12 col-sm-6">
+
+               <div class="form-group">
+                <label for="Visible" class="col-xs-3 col-sm-4 control-label nh-required">
+                 <span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Visible?</span>
+               </label>
+                 <div class="col-xs-9 col-sm-8">
+                <input class="form-control checkbutton" type="checkbox" name="Visible" id="Visible" value="1" />
+                </div>
+               </div>
+
+               <div class="form-group"> <label for="Featured" class="col-xs-3 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Featured?</span></label>
+                 <div class="col-xs-9 col-sm-8"> <input class="form-control checkbutton" type="checkbox" name="Featured" id="Featured" value="1" /> </div>
+               </div>
+               <hr />
+               <div class="form-group"> <label for="OperatorName" class="col-xs-3 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block">Operator:</span><span
+                     class="visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Operator Name:</span></label>
+                 <div class="col-xs-9 col-sm-8"> <input class="form-control" type="text" name="OperatorName" id="OperatorName" value="Aan-die-Vaal Nature Reserve" maxlength="50" required="true" title="Enter the Operator Name" /> </div>
+               </div>
+               <div class="form-group"> <label for="FarmName" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block">Farm:</span><span class="visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Farm
+                     Name:</span></label>
+                 <div class="col-xs-9 col-sm-8"> <input class="form-control" type="text" name="FarmName" id="FarmName" value="Aan-die-Vaal Nature Reserve" maxlength="50" /> </div>
+               </div>
+               <div class="form-group"> <label for="CountryCode" class="col-xs-3 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Country:</span></label>
+                 <div class="col-xs-9 col-sm-8"> <select name="CountryCode" id="CountryCode" required="true" title="Select a Country" class="form-control" data-selected="ZA" data-ajax-source="https://www.nexthunt.co.za/administration/json/countries"
+                     data-ajax-updates="[&quot;select#StateID&quot;, &quot;select#TownID&quot;]">
+                     <option value="">Select a Country</option>
+                   </select> </div>
+               </div>
+               <div class="form-group"> <label for="StateID" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">State:</span></label>
+                 <div class="col-xs-9 col-sm-8"> <select name="StateID" id="StateID" class="form-control" data-selected="24" data-ajax-source="https://www.nexthunt.co.za/administration/json/states" data-ajax-depends="[&quot;select#CountryCode&quot;]"
+                     data-ajax-updates="[&quot;select#TownID&quot;]">
+                     <option value="">Select a State</option>
+                   </select> </div>
+               </div>
+               <div class="form-group"> <label for="TownID" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Town:</span></label>
+                 <div class="col-xs-9 col-sm-8"> <select name="TownID" id="TownID" class="form-control" data-selected="471" data-ajax-source="https://www.nexthunt.co.za/administration/json/towns"
+                     data-ajax-depends="[&quot;select#CountryCode&quot;, &quot;select#StateID&quot;]">
+                     <option value="">Select a Town</option>
+                   </select> </div>
+               </div>
+               <div class="form-group"> <label for="Latitude" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Latitude:</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="Latitude" id="Latitude" value="" data-rule-number="true" maxlength="10" /> </div>
+               </div>
+               <div class="form-group"> <label for="Longitude" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Longitude:</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="Longitude" id="Longitude" value="" data-rule-number="true" maxlength="10" /> </div>
+               </div>
+               <div class="form-group"> <label for="Size" class="col-xs-3 col-sm-4 control-label"><span class="visible-xs-inline-block">Size (ha):</span><span class="visible-sm-inline-block">Size (ha):</span><span
+                     class="visible-md-inline-block visible-lg-inline-block">Farm Size (ha):</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="Size" id="Size" value="" data-rule-number="true" maxlength="10" /> </div>
+               </div>
+               <hr />
+               <div class="form-group"> <label for="MinGuests" class="col-xs-5 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Min
+                     Guests:</span></label>
+                 <div class="col-xs-5 col-sm-4 col-md-3 col-lg-2"> <input class="form-control" type="text" name="MinGuests" id="MinGuests" value="1" maxlength="2" data-rule-digits="true" data-rule-min="1" required="true"
+                     title="Enter the Minimum Guests" /> </div>
+               </div>
+               <div class="form-group"> <label for="MaxGuests" class="col-xs-5 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Max
+                     Guests:</span></label>
+                 <div class="col-xs-5 col-sm-4 col-md-3 col-lg-2"> <input class="form-control nh-greater-than" type="text" name="MaxGuests" id="MaxGuests" value="20" maxlength="2" data-rule-digits="true" data-rule-min="1" data-min="#MinGuests"
+                     required="true" title="Enter the Maximum Guests" /> </div>
+               </div>
+               <div class="form-group"> <label for="Currency" class="col-xs-5 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Currency:</span></label>
+                 <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3"> <select name="Currency" id="Currency" class="form-control" required="true" title="Select a Currency">
+                     <option value="">-----</option>
+                     <option value="AUD">AUD</option>
+                     <option value="EUR">EUR</option>
+                     <option value="GBP">GBP</option>
+                     <option value="NAD">NAD</option>
+                     <option value="USD">USD</option>
+                     <option value="ZAR" selected="selected">ZAR</option>
+                   </select> </div>
+               </div>
+               <div class="form-group"> <label for="Deposit" class="col-xs-5 col-sm-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Deposit:</span></label>
+                 <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3"> <select name="Deposit" id="Deposit" class="form-control" required="true" title="Select a Deposit">
+                     <option value="">-----</option>
+                     <option value="15">15%</option>
+                     <option value="25">25%</option>
+                     <option value="50" selected="selected">50%</option>
+                     <option value="100">100%</option>
+                   </select> </div>
+               </div>
+               <div class="visible-xs-block">
+                 <hr />
+               </div>
+             </div>
+             <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+               <div class="form-group"> <label for="BowHunting" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Bow
+                     Hunting?</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control checkbutton" type="checkbox" name="BowHunting" id="BowHunting" value="1" checked="checked" /> </div>
+               </div>
+               <div class="form-group"> <label for="RifleHunting" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Rifle
+                     Hunting?</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control checkbutton" type="checkbox" name="RifleHunting" id="RifleHunting" value="1" checked="checked" /> </div>
+               </div>
+               <div class="form-group"> <label for="Trophy" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Trophy
+                     Hunting?</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control checkbutton" type="checkbox" name="Trophy" id="Trophy" value="1" checked="checked" /> </div>
+               </div>
+               <div class="form-group"> <label for="Biltong" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Biltong
+                     Hunting?</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control checkbutton" type="checkbox" name="Biltong" id="Biltong" value="1" checked="checked" /> </div>
+               </div>
+               <hr />
+               <div class="form-group"> <label for="Hunter" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Hunter
+                     Rate:</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="Hunter" id="Hunter" value="0" maxlength="7" data-rule-digits="true" data-rule-min="0" required="true" title="Enter the Hunter Rate" />
+                 </div>
+               </div>
+               <div class="form-group"> <label for="NonHunter" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label nh-required"><span
+                     class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Non-Hunter Rate:</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="NonHunter" id="NonHunter" value="0" maxlength="7" data-rule-digits="true" data-rule-min="0" required="true"
+                     title="Enter the Non-Hunter Rate" /> </div>
+               </div>
+               <div class="form-group"> <label for="Child" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label nh-required"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Child
+                     Rate:</span></label>
+                 <div class="col-xs-5 col-sm-6 col-md-5 col-lg-4"> <input class="form-control" type="text" name="Child" id="Child" value="0" maxlength="7" data-rule-digits="true" data-rule-min="0" required="true" title="Enter the Child Rate" />
+                 </div>
+               </div>
+               <div class="form-group"> <label for="Missed" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Missed
+                     Shot:</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control" type="text" name="Missed" id="Missed" value="0" /> </div>
+               </div>
+               <div class="form-group"> <label for="Wounded" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Wounded
+                     Animal:</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control" type="text" name="Wounded" id="Wounded" value="" /> </div>
+               </div>
+               <div class="form-group"> <label for="Vehicle" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Vehicle
+                     Rate:</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control" type="text" name="Vehicle" id="Vehicle" value="" /> </div>
+               </div>
+               <div class="form-group"> <label for="Tracker" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Tracker
+                     Rate:</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control" type="text" name="Tracker" id="Tracker" value="" /> </div>
+               </div>
+               <div class="form-group"> <label for="Skinner" class="col-xs-5 col-sm-6 col-md-5 col-lg-4 control-label"><span class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">Skinner
+                     Rate:</span></label>
+                 <div class="col-xs-7 col-sm-6 col-md-7 col-lg-8"> <input class="form-control" type="text" name="Skinner" id="Skinner" value="" /> </div>
+               </div>
+             </div>
+             <div class="col-xs-12">
+               <hr />
+               <div class="form-group">
+                 <div class="col-xs-12"> <textarea name="Description" id="Description" class="wysiwyg"></textarea> </div>
+               </div>
+               <div class="btn-toolbar-bottom"> <button type="submit" class="btn btn-success" role="button" title="Save" data-loading-text="&lt;span class=&quot;glyphicon glyphicon-refresh spin&quot;&gt;&lt;/span&gt;Saving..."><span
+                     class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-floppy-disk"></span>Save</span></button> </div>
+             </div>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div>
+   <div class="modal fade" id="loading" data-backdrop="static">
+     <div class="modal-dialog modal-sm">
+       <div class="modal-content text-center" style="padding: 50px;"> <i class="fa fa-fw fa-refresh fa-spin"></i> Processing... </div>
+     </div>
+   </div>
+   <script src="https://www.nexthunt.co.za/static/scripts/jquery.min.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/bootstrap.min.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/jquery.validate.min.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/jquery.blueimp-gallery.min.js"></script>
+   <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/filemanager/plugin.min.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/common.js" id="common-js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/admin.js"></script>
+   <script src="https://www.nexthunt.co.za/static/scripts/editor.js"></script>
+   <footer class="hidden-print nh-gradient"> Current User: <a href="https://www.nexthunt.co.za/administration/users/signout" class="nh-signout"><span
+         class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block"><span class="glyphicon fa-fw glyphicon-log-out"></span>Pierre du Preez</span></a><br /> <span class="small text-muted">Copyright &copy;
+       NextHunt. All rights reserved.</span> </footer>
+ </body>
+
+ </html>
